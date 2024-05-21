@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Person</title>
+</head>
+
+<body>
+    <div class=" container text-center pt-4">
+        <div class="row mb-5 mt-3">
+            <h1 class=" text-uppercase">List of All People</h1>
+        </div>
+        <!-- <div class="row">
+            <a href="#" routerLink="/people/create/">Create New Person Entry</a>
+        </div> -->
+        <div class=" row card  border-dark  table-responsive ">
+            <table class="table text-center table-hover   radius-3 ">
+                <thead class="fw-bold">
+                    <tr class="fs-5 fw-bold">
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Mobile Number</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr> 
+                </thead>
+                <tbody class="fw-medium">
+                    <tr *ngFor="let person of persons">
+                        
+                        <td>
+                            {{person.name}}
+                        </td>
+                        <td>
+                            {{person.age}}
+                        </td>
+                        <td>
+                            {{person.gender}}
+                        </td>
+                        <td>
+                            {{person.mobileNumber}}
+                        </td>
+                        <td>
+                            <a href="#" [routerLink]="['/people/',person.id, 'edit']" class="icon link-secondary link-opacity-50-hover">
+                                <i class="bi bi-pencil-square"></i>
+                            </a>
+                        </td>
+                        <td>
+
+                            <button class="btn btn-outline-secondary btn-sm" type="button"
+                                (click)="deletePerson(person.id)"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

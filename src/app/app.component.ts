@@ -11,3 +11,17 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'people-angular-app';
 }
+// import { Component, Inject } from '@angular/core';
+
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.css'],
+// })
+// export class AppComponent {
+//   title: string;
+
+//   constructor(@Inject('APP_CONFIG') private config: any) {
+//     this.title = config.title;
+//   }
+// }

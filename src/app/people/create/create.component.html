@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Person</title>
+</head>
+
+<body>
+    <h1 class="text-center mb-4 mt-5">Create Person</h1>
+    <div class="col-6 offset-3">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <div class="mb-3">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-control" type="text" id="name" formControlName="name" required>
+                <div *ngIf="f['name'].touched && f['name'].invalid" class="invalid-feedback d-block">
+                    <div *ngIf="f['name'].errors?.['required']">
+                        Name is required
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="age">Age</label>
+                <input class="form-control" type="number" id="age" formControlName="age" required>
+                <div *ngIf="f['age'].touched && f['age'].invalid" class="invalid-feedback d-block">
+                    <div *ngIf="f['age'].errors?.['required']">
+                        Age is required
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="gender">Gender</label>
+                <select class="form-select" aria-label="Default select example" id="gender" formControlName="gender"
+                    required>
+                    <option value="" disabled>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div *ngIf="f['gender'].touched && f['gender'].invalid" class="invalid-feedback d-block">
+                    <div *ngIf="f['gender'].errors?.['required']">
+                        Gender is required
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="mobileNumber">Mobile Number</label>
+                <input class="form-control" type="text" id="mobileNumber" formControlName="mobileNumber" required>
+                <div *ngIf="f['mobileNumber'].touched && f['mobileNumber'].invalid" class="invalid-feedback d-block">
+                    <div *ngIf="f['mobileNumber'].errors?.['required']">
+                        Mobile Number is required
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-outline-dark" type="submit" [disabled]="!form.valid">Create Person</button>
+            </div>
+        </form>
+    </div>
+  
+</body>
+
+</html>
