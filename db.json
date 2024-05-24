@@ -1,20 +1,6 @@
 {
   "people": [
     {
-      "name": "Samantha Andrews",
-      "age": 20,
-      "gender": "Female",
-      "mobileNumber": "880-1892-02",
-      "id": "b191027a-5a6b-4b14-a649-18a729494029"
-    },
-    {
-      "name": "Frederick Spencer",
-      "gender": "Male",
-      "age": 18,
-      "mobileNumber": "910-9829-56",
-      "id": "697468fe-cde0-4a91-9bea-f14b99f68a8a"
-    },
-    {
       "name": "Gianna Wilson",
       "gender": "Female",
       "age": 21,
